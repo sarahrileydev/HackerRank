@@ -15,7 +15,7 @@ function timeConversion(s) {
   }
   // if afternoon
   if (hour === 12 && s.indexOf("PM") !== -1) {
-    return time + timeFormat;
+    return hour + timeFormat;
   }
   // if hour is from 1 to 11PM, add 12 to the time
   if (hour < 12 && s.indexOf("PM") !== -1) {
@@ -31,3 +31,5 @@ function timeConversion(s) {
     }
   }
 }
+
+timeConversion("12:45:54PM")
