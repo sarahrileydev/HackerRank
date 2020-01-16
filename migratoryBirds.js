@@ -7,8 +7,11 @@ function migratoryBirds(arr) {
       typesCount[arr[i]]++;
     }
   }
+  let max = Object.keys(typesCount).filter(x => {
+    return typesCount[x] == Math.max.apply(null, Object.values(typesCount));
+  });
 
-  console.log(Object.values(typesCount));
+  return max[0];
 }
 
 migratoryBirds([1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4]);
